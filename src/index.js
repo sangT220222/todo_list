@@ -11,6 +11,7 @@ const main = () => {
     // localStorage.setItem('todos', JSON.stringify(todo_arr)); 
     add_todo_to_html();
     event_listener_to_submit();
+    
     // console.log(todo_arr)
 }
 
