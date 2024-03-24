@@ -11,7 +11,7 @@ function create_form(){
 function create_input(){
     const input = document.createElement('input');
     input.type = 'text';
-    input.id = 'todoInput';
+    input.id = 'todo_input';
     input.placeholder = 'Enter a todo';
     return input;
 }
@@ -23,10 +23,17 @@ function create_button(){
     return button;
 }
 
+function create_ul(){
+    const ul = document.createElement('ul');
+    ul.id = 'todo_list';
+    document.body.append(ul);
+}
+
 
 function set_up() {
     document.addEventListener('DOMContentLoaded', () => {
         create_form();
+        create_ul();
     });
 }
 
