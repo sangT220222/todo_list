@@ -10,9 +10,9 @@ function event_listener_clear(){
     document.addEventListener('DOMContentLoaded', () => {
         const clear_btn = document.querySelector('#clear');
         clear_btn.addEventListener("click",(e) => {
-            console.log('clearing list');
+            // console.log('clearing list');
             clear_list();
-            window.location.reload();
+            window.location.reload();//reload the window so that it updates with the right content
         })    
     })
 }

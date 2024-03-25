@@ -9,10 +9,23 @@ function render_todo_list(){
     if(todo_arr && todo_list){
         todo_list.innerHTML = '';
         console.log(todo_arr);
-        todo_arr.forEach((item,index) => {
+        todo_arr.forEach(item => {
             const list = document.createElement('li');
-            // console.log(item);
-            list.textContent = `${index}.${item}`;
+            const title_element = document.createElement('strong');
+            title_element.textContent = 'Title: ';
+            const title_text = document.createTextNode(item.title);
+            title_element.appendChild(title_text);
+        
+            // const descriptionElement = document.createElement('p');
+            // descriptionElement.textContent = 'Description: ' + item.description;
+        
+            const due_date_element = document.createElement('p');
+            due_date_element.textContent = 'Due Date: ' + item.due_date;
+        
+            // console.log(item.title);
+            // list.textContent = `${item.title}`;
+            list.appendChild(title_element);
+            list.appendChild(due_date_element);
             todo_list.appendChild(list);
         });    
     } else if(todo_arr){ //else condition if todo_list li elememnt in HTML is empty
