@@ -29,11 +29,19 @@ function create_ul(){
     document.body.append(ul);
 }
 
+function create_clear_btn(){
+    const button = document.createElement('button');
+    button.type = 'submit';
+    button.id = 'clear';
+    button.textContent = 'Clear list';
+    document.body.append(button);
+}
 
 function set_up() {
     document.addEventListener('DOMContentLoaded', () => {
         create_form();
         create_ul();
+        create_clear_btn();
     });
 }
 

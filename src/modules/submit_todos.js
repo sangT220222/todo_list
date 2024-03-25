@@ -16,7 +16,7 @@ function populate_storage(){
 
 function event_listener_to_submit(){
     document.addEventListener("DOMContentLoaded", ()=>{
-        const todo_form = document.querySelector('#todo_form');
+
         todo_form.addEventListener('submit', (e) => {
             e.preventDefault();
             populate_storage();
