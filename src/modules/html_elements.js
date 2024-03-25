@@ -2,13 +2,13 @@ function create_form(){
     const form = document.createElement('form');
     form.id = 'todo_form';
     const title_input = create_input('title_input','text', "Enter Title");
-    const title_label = create_label('title','Title:');
+    const title_label = create_label('todo_form','Title:');
 
-    const text_area = create_text_area('description');
-    const description_label = create_label('description','Description:');
+    const text_area = create_text_area("text_area");
+    const description_label = create_label('todo_form','Description:');
 
     const date_input = create_input('due_date', 'date', 'Enter Due Date:');
-    const date_label = create_label('date','Due Date');
+    const date_label = create_label('todo_form','Due Date');
 
     const priority = create_select('priority','Priority');
     const priority_label = create_label('priority','Priority of task:');

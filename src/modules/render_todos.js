@@ -16,16 +16,22 @@ function render_todo_list(){
             const title_text = document.createTextNode(item.title);
             title_element.appendChild(title_text);
         
-            // const descriptionElement = document.createElement('p');
-            // descriptionElement.textContent = 'Description: ' + item.description;
+            const description_element = document.createElement('p');
+            description_element.textContent = 'Description: ' + item.description;
         
             const due_date_element = document.createElement('p');
             due_date_element.textContent = 'Due Date: ' + item.due_date;
-        
-            // console.log(item.title);
+
+            const priority_element = document.createElement('p');
+            priority_element.textContent = 'Priority: ' + item.priority;
+    
+            // console.log(item.description);
             // list.textContent = `${item.title}`;
             list.appendChild(title_element);
+            list.appendChild(description_element);
             list.appendChild(due_date_element);
+            list.appendChild(priority_element);
+
             todo_list.appendChild(list);
         });    
     } else if(todo_arr){ //else condition if todo_list li elememnt in HTML is empty
