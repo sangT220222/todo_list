@@ -34,16 +34,7 @@ function render_todo_list(){
 
             todo_list.appendChild(list);
         });    
-    } else if(todo_arr){ //else condition if todo_list li elememnt in HTML is empty
-        console.log(todo_arr);
-        todo_arr.forEach((item,index) => {
-            const list = document.createElement('li');
-            console.log(item);
-            list.textContent = `${index}.${item}`;
-            todo_list.appendChild(list);
-        });    
-    }
-    //make it blank so that everytime the page is refresh we can update it from scratch
+    } 
 }
 
 function add_todo_to_html() {

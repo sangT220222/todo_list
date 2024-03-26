@@ -3,7 +3,7 @@ import {get_todo_arr} from './data_from_api';
 
 function populate_storage(){
     let todo_title = document.querySelector('#title_input').value;
-    let todo_text = document.getElementById('text_area').value;
+    let todo_text = document.querySelector('#text_area').value;
     let todo_date = document.querySelector('#due_date').value;
     let todo_priority = document.querySelector('#priority').value;
     
@@ -20,7 +20,7 @@ function populate_storage(){
         todo_arr.push(todo_item);
         localStorage.setItem('todos', JSON.stringify(todo_arr));
         document.querySelector('#title_input').value = '';
-        document.querySelector('#description').value = '';
+        document.querySelector('#text_area').value = '';
         document.querySelector('#due_date').value = '';
         document.querySelector('#priority').value = '';
         //as the new todo item will be displayed when refresh is set, the code below will do that once a new item is added

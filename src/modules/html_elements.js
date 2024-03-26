@@ -13,7 +13,9 @@ function create_form(){
     const priority = create_select('priority','Priority');
     const priority_label = create_label('priority','Priority of task:');
 
-    const button = create_button();
+    const button = create_button('add_todo', 'Add Todo Item');
+    const clear_list = create_button('clear','Clear whole list');
+
     const line_break = add_line_break();
 
     form.appendChild(title_label);
@@ -34,6 +36,7 @@ function create_form(){
 
     form.appendChild(button);
     document.body.append(form);
+    document.body.append(clear_list);
 }
 
 function create_label(label_for,label_text){
@@ -51,10 +54,11 @@ function create_input(id,type,placeholder){
     return input;
 }
 
-function create_button(){
+function create_button(id, text_content){
     const button = document.createElement('button');
     button.type = 'submit';
-    button.textContent = 'Add Todo';
+    button.id = id;
+    button.textContent = text_content;
     return button;
 }
 
@@ -97,20 +101,20 @@ function add_line_break(){
     return line_break;
 }
 
-function create_clear_btn(){
-    const button = document.createElement('button');
-    button.type = 'submit';
-    button.id = 'clear';
-    button.textContent = 'Clear list';
-    document.body.append(button);
-}
+// function create_clear_btn(){
+//     const button = document.createElement('button');
+//     button.type = 'submit';
+//     button.id = 'clear';
+//     button.textContent = 'Clear list';
+//     document.body.append(button);
+// }
 
 function set_up() {
     document.addEventListener('DOMContentLoaded', () => {
         create_form();
         create_ul();
-        create_clear_btn();
     });
 }
 
+export {create_button};
 export {set_up};
