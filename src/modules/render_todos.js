@@ -1,4 +1,5 @@
 import {get_todo_arr} from './data_from_api';
+import {create_button} from './html_elements';
 
 function render_todo_list(){
     //here we will retrieve array from localStorage from API that will give us the todo list items that are saved on it
@@ -24,6 +25,8 @@ function render_todo_list(){
 
             const priority_element = document.createElement('p');
             priority_element.textContent = 'Priority: ' + item.priority;
+
+            const delete_btn = create_button('delete_item','Delete Item');
     
             // console.log(item.description);
             // list.textContent = `${item.title}`;
@@ -31,6 +34,7 @@ function render_todo_list(){
             list.appendChild(description_element);
             list.appendChild(due_date_element);
             list.appendChild(priority_element);
+            list.appendChild(delete_btn);
 
             todo_list.appendChild(list);
         });    
