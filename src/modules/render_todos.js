@@ -13,7 +13,7 @@ function render_todo_list(){
         // console.log(todo_arr);
         todo_arr.forEach((item,index) => {
             const list = document.createElement('li');
-            const title_element = document.createElement('strong');
+            const title_element = document.createElement('p');
             title_element.textContent = 'Title: ';
             const title_text = document.createTextNode(item.title);
             title_element.appendChild(title_text);

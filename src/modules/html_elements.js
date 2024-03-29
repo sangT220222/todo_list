@@ -2,16 +2,16 @@ function create_form(){
     const form = document.createElement('form');
     form.id = 'todo_form';
     const title_input = create_input('title_input','text', "Enter Title");
-    const title_label = create_label('todo_form','Title:');
+    const title_label = create_label('todo_form','Title');
 
     const text_area = create_text_area("text_area");
-    const description_label = create_label('todo_form','Description:');
+    const description_label = create_label('todo_form','Description');
 
-    const date_input = create_input('due_date', 'date', 'Enter Due Date:');
+    const date_input = create_input('due_date', 'date', 'Due Date');
     const date_label = create_label('todo_form','Due Date');
 
     const priority = create_select('priority','Priority');
-    const priority_label = create_label('priority','Priority of task:');
+    const priority_label = create_label('priority','Priority of task');
 
     const button = create_button('add_todo', 'Add Todo Item');
     const clear_list = create_button('clear','Clear whole list');
@@ -100,14 +100,6 @@ function add_line_break(){
     const line_break = document.createElement('br');
     return line_break;
 }
-
-// function create_clear_btn(){
-//     const button = document.createElement('button');
-//     button.type = 'submit';
-//     button.id = 'clear';
-//     button.textContent = 'Clear list';
-//     document.body.append(button);
-// }
 
 function set_up() {
     document.addEventListener('DOMContentLoaded', () => {
